@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/favicon.png">
+  <title>Music Player</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js"></script>
+  <!-- Библиотека для парсинга мета-тегов из аудиофайлов: -->
+  <script src="https://cdn.jsdelivr.net/npm/mp3tag.js@latest/dist/mp3tag.min.js"></script>
+  <script src="https://static.elfsight.com/platform/platform.js" async></script>
+  <script src="https://static.elfsight.com/platform/platform.js" async></script>
+
+
+</head>
+
+<body>
+  <header>
+    <h1>HyberZone</h1>
+    <hr>
+  </header>
+
+  <div class="wrapper">
+    <p class="dropezone-title">• CUSTOM PLAYER •</p>
+
+    <div id="dropzone">
+      <div class="dropezone-img">
+       <img src="img/upload.png" alt="upload" srcset=""> 
+      </div>
+      <div class="dropzone-text">
+        Drag or <a onClick="chooseFile()">select</a> file
+      </div>
+    </div>
+
+    <input type="text" id="linkInput" onChange="processLink()" placeholder="Paste the link to the file..">
+    
+
+    <div class="playerContainer">
+      <div class="player-card">
+        <img id="cover" />
+        
+        <div class="player-info">
+          <p id="artist"></p>
+          <p id="song"></p>
+        </div>
+      </div>
+
+      <div class="player-audio">
+        <audio id="player" controls></audio>
+      </div>
+    </div>
+    <hr>
+
+    <div id="video" class="elfsight-app-85644664-72dd-4ab2-9868-6f534ac683c4" data-elfsight-app-lazy></div>
+
+    <div id="radio" class="elfsight-app-a0e6b87f-692c-4107-af0c-926ebcbf8c9e" data-elfsight-app-lazy></div>
+
+  </div>
+
+</body>
+</html>
