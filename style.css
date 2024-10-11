@@ -3,7 +3,7 @@
 .body, html {
   background: #2c2c2c;
   font-family: 'Roboto', serif;
-  color: #83E895;
+  color: #6de483;
 }
 
 hr {
@@ -23,12 +23,6 @@ a {
   border: none;
   cursor: pointer;
   text-decoration: underline;
-}
-
-player-img {
-  border-radius: 8px;
-  padding: 5px;
-  background: #504f4f;
 }
 
 .wrapper {
@@ -62,18 +56,49 @@ player-img {
 
 #linkInput {
   box-sizing: border-box;
-  outline: none;
   width: 100%;
   margin: 20px 0;
-  padding: 20px;
-  border-radius: 8px;
+  padding: 25px 20px;
   border: none;
+  outline: none;
+  border-radius: 8px;
   background: #504f4f;
   color: #83E895;
   font-size: 20px;
 }
-#linkInput:focus {
-  background: #504F4F;
+
+.playlist-title {
+  margin: 20px 0 0;
+  font-size: 20px;
+}
+
+ul {
+  box-sizing: border-box;
+  padding: 20px 23px;
+  width: 100%;
+  min-height: 200px;
+  background-color: #504f4f;
+  border-radius: 8px;
+  
+}
+li {
+  margin-bottom: 16px;
+}
+
+.playlist-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+}
+.playlist-button {
+  margin-left: 10px;
+  padding: 5px 12px;
+  background: #83E895;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 .playerContainer {
@@ -81,39 +106,80 @@ player-img {
   display: flex;
   flex-direction: column;
   align-items: baseline;
-  margin: 20px 0;
+  margin: 20px 0 40px;
 }
-
-.player-card {
-  display: flex;
-  flex-direction: space-between;
-  margin-bottom: 20px;
-  gap: 40px;
-}
-
-.player-info {
-  display: flex;
-  flex-direction: column;
-}
-
-#artist {
-  font-size: 24px;
-}
-
 .playerContainer audio {
   margin-top: 20px;
   color: #83E895;
   width: 80vw;
 }
 
-#cover {
-  width: 200px;
-  height: 200px;
+.player-card {
+  display: flex;
+  flex-direction: space-between;
+  gap: 40px;
+  width: 100%;
+}
+
+.player-info {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 30px;
+  flex: 1;
   border-radius: 8px;
+  background: #504f4f;
+}
+
+#artist {
+  font-size: 24px;
+}
+
+#cover {
+  width: 100px;
+  height: 100px;
+  border: none;
+  border-radius: 8px;
+  background: #504f4f;
 }
 
 #video {
-  margin-top: 20px;
   color: #83E895;
-  width: 80vw;
+  width: 100%; 
+  max-width: 900px;
+  margin: 30px auto;
+}
+
+.radio-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 20px 0 0;
+}
+
+
+@media screen and (max-width: 800px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  #playlist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1em;
+    padding: 25px;
+  }
+
+  #playlist li {
+    font-size: 1.1em;
+    height: max-content;
+    width: min-content;
+  }
+  .playlist-item {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  #artist, #song {
+    font-size: 1em;
+  }
 }

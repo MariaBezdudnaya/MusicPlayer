@@ -11,8 +11,6 @@
   <script src="https://cdn.jsdelivr.net/npm/mp3tag.js@latest/dist/mp3tag.min.js"></script>
   <script src="https://static.elfsight.com/platform/platform.js" async></script>
   <script src="https://static.elfsight.com/platform/platform.js" async></script>
-
-
 </head>
 
 <body>
@@ -34,14 +32,16 @@
     </div>
 
     <input type="text" id="linkInput" onChange="processLink()" placeholder="Paste the link to the file..">
-    
 
+    <p class="playlist-title">PLAYLIST</p>
+    <ul id="playlist"></ul> <!-- Элемент для отображения плейлиста -->
+    
     <div class="playerContainer">
       <div class="player-card">
         <img id="cover" />
         
         <div class="player-info">
-          <p id="artist"></p>
+          <span id="artist"></span>
           <p id="song"></p>
         </div>
       </div>
@@ -50,13 +50,14 @@
         <audio id="player" controls></audio>
       </div>
     </div>
-    <hr>
 
+
+    <hr>
     <div id="video" class="elfsight-app-85644664-72dd-4ab2-9868-6f534ac683c4" data-elfsight-app-lazy></div>
 
+    <hr>
+    <p class="radio-title">• RADIO PLAYER •</p>
     <div id="radio" class="elfsight-app-a0e6b87f-692c-4107-af0c-926ebcbf8c9e" data-elfsight-app-lazy></div>
-
   </div>
-
 </body>
 </html>
