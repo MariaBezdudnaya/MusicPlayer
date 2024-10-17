@@ -6,10 +6,9 @@
   <link rel="icon" href="img/favicon.png">
   <title>Music Player</title>
   <link rel="stylesheet" href="style.css">
-  <script src="main.js"></script>
+  <script src="main.js" defer></script>
   <!-- Библиотека для парсинга мета-тегов из аудиофайлов: -->
   <script src="https://cdn.jsdelivr.net/npm/mp3tag.js@latest/dist/mp3tag.min.js"></script>
-  <script src="https://static.elfsight.com/platform/platform.js" async></script>
   <script src="https://static.elfsight.com/platform/platform.js" async></script>
 </head>
 
@@ -27,18 +26,21 @@
        <img src="img/upload.png" alt="upload" srcset=""> 
       </div>
       <div class="dropzone-text">
-        Drag or <a onClick="chooseFile()">select</a> file
+        <span class="drag-file">Drag or</span> <a onClick="chooseFile()">Select</a> file
       </div>
     </div>
 
-    <input type="text" id="linkInput" onChange="processLink()" placeholder="Paste the link to the file..">
+    <input type="text" id="searchInput" placeholder="Paste the link to the file..">
+    
+    <div id="searchResults"></div> <!-- Элемент хранения результата поиска -->
+    <div id="currentSong"></div> <!-- Элемент для хранения текущей песни -->
 
     <p class="playlist-title">PLAYLIST</p>
     <ul id="playlist"></ul> <!-- Элемент для отображения плейлиста -->
-    
+
     <div class="playerContainer">
       <div class="player-card">
-        <img id="cover" />
+        <img id="cover" src="default_cover.jpg" />
         
         <div class="player-info">
           <span id="artist"></span>
